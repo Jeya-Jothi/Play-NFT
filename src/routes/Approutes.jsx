@@ -1,9 +1,9 @@
 import { Suspense, lazy } from "react";
 import { Routes, Route } from "react-router-dom";
-import PageShell from "../assets/Components/layout/PageShell.";
-import ErrorBoundary from "../assets/Components/ErrorBoundary";
+import PageShell from "../Components/layout/PageShell.jsx";
+import ErrorBoundary from "../Components/ErrorBoundary";
 
-const HomePage = lazy(() => import("../assets/Pages/HomePage.jsx"));
+const HomePage = lazy(() => import("../Pages/HomePage.jsx"));
 function Loader() {
   return (
     <div

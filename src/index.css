@@ -1,1 +1,28 @@
 @import "tailwindcss";
+
+@font-face {
+  font-family: "Britanica";
+  src: url("./assets/fonts/britanica-expanded-heavy.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Marlin";
+  src: url("./assets/fonts/marlin-sans-sq-regular.otf") format("truetype");
+  font-weight: normal;
+}
+
+* {
+  font-family: "Marlin";
+}
+
+body {
+  margin: 0;
+}
+
+:root {
+  --color1: #060318;
+  --color2: #6329d3; /* purple */
+  --color3: #1195f0; /* light blue */
+}
