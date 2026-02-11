@@ -7,6 +7,10 @@
   font-style: normal;
 }
 
+.font-britanica {
+  font-family: "Britanica", sans-serif;
+}
+
 @font-face {
   font-family: "Marlin";
   src: url("./assets/fonts/marlin-sans-sq-regular.otf") format("truetype");
@@ -25,4 +29,8 @@ body {
   --color1: #060318;
   --color2: #6329d3; /* purple */
   --color3: #1195f0; /* light blue */
+}
+
+button {
+  cursor: pointer;
 }

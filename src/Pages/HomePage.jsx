@@ -1,8 +1,10 @@
+import HeroSection from "../Components/HomePage/HeroSection";
+
 export default function HomePage() {
   return (
     <>
-      <section className="h-screen">
-        <p>Home page</p>
+      <section className="">
+        <HeroSection />
       </section>
     </>
   );

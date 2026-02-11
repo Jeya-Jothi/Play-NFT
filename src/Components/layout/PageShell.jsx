@@ -5,7 +5,7 @@ import Footer from "./Footer.jsx";
 export default function PageShell() {
   return (
     <>
-      <div className="bg-(--color1) relative z-0 overflow-hidden">
+      <div className="bg-(--color1) relative z-0 overflow-hidden selection:bg-white selection:text-(--color1)">
         <Header />
         <main>
           {/* nested routes render here */}
