@@ -20,8 +20,10 @@ export default class ErrorBoundary extends React.Component {
     if (this.state.hasError) {
       return (
         <div className="min-h-screen flex flex-col items-center justify-center p-6">
-          <h2 className="text-xl font-semibold mb-2">Something went wrong.</h2>
-          <p className="text-sm text-slate-600 mb-4">
+          <h2 className="text-xl font-semibold mb-2 text-(--color3)">
+            Something went wrong.
+          </h2>
+          <p className="text-sm text-white/90 mb-4">
             An error occurred while loading this part of the app.
           </p>
           <details className="text-xs text-left max-w-xl bg-slate-50 p-3 rounded">

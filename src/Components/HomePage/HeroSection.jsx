@@ -13,7 +13,7 @@ export default function HeroSection() {
 
   return (
     <section
-      className="text-white mt-5 mb-80 lg:mt-10 grid lg:grid-cols-2 items-center
+      className="text-white mt-5 mb-10 lg:mb-20 lg:mt-10 grid lg:grid-cols-2 items-center
      gap-10 lg:gap-20 px-5 md:px-10 lg:px-20"
     >
       {/* Left */}
@@ -95,6 +95,7 @@ export default function HeroSection() {
               <img
                 src={user.img}
                 alt="avatar"
+                key={user.id}
                 className="w-10 h-10 lg:w-15 lg:h-15 rounded-full border-2 border-(--color2)"
               />
             ))}
