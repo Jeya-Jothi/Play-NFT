@@ -34,3 +34,21 @@ body {
 button {
   cursor: pointer;
 }
+
+/* all slides */
+.swiper-slide .card {
+  transform: scale(0.85);
+  transition: all 0.5s ease;
+}
+
+/* left & right near */
+.swiper-slide-prev .card,
+.swiper-slide-next .card {
+  transform: scale(0.85);
+}
+
+/* center */
+.swiper-slide-active .card {
+  transform: scale(1);
+  z-index: 10;
+}

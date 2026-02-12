@@ -19,7 +19,7 @@ export default function BrandMarquee() {
     { id: 7, img: RevolutLogo },
   ];
   return (
-    <section className="text-white mb-80">
+    <section className="text-white md:mb-5 lg:mb-20">
       <div className="bg-linear-to-r from-(--color2)/50 to-(--color3)/50 py-5 relative">
         <Marquee speed={50} className="">
           {[...brands, ...brands].map((brand, index) => (
