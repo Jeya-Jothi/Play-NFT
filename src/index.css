@@ -52,3 +52,22 @@ button {
   transform: scale(1);
   z-index: 10;
 }
+
+/* ------------------------- Moving hand ------------------------ */
+.hand {
+  animation: float 6s ease-in-out infinite;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0px);
+  }
+
+  50% {
+    transform: perspective(1000px) rotateX(10deg) rotateY(20deg)
+      translateY(-25px);
+  }
+}
