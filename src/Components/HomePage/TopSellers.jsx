@@ -6,7 +6,7 @@ export default function TopSeller() {
   const secondRow = sellers.slice(8, 17);
 
   return (
-    <section className="text-white  lg:my-10 xl:my-20">
+    <section className="text-white lg:my-10 xl:my-20">
       <p
         className="text-center text-white font-britanica 
       text-2xl md:text-3xl xl:text-4xl text-nowrap mb-10"
@@ -62,7 +62,7 @@ function SellerCard({ avatar, name, eth, customStyle }) {
         </div>
         <div>
           <p className="font-semibold">{name}</p>
-          <p>{eth}</p>
+          <p className="text-white/90 text-sm lg:text-base">{eth} Eth</p>
         </div>
       </div>
     </div>
