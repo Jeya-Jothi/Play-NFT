@@ -183,19 +183,19 @@ export default function Popular() {
         {/* Background light */}
         <div
           className="absolute top-1/2 left-1/2 
-        -translate-y-1/2 -translate-x-1/2 w-100 h-80 lg:w-140 lg:h-100
+        -translate-y-1/2 -translate-x-1/2 w-100 h-50 lg:w-140 lg:h-100
          bg-(--color3)/50 rounded-full blur-3xl"
         ></div>
 
         {/* Left fading */}
         <div
           className="absolute left-0 top-0 w-15 lg:w-30 h-full 
-        bg-linear-to-r from-(--color1) to-(--color2)/5 z-5"
+        bg-linear-to-r from-(--color1) to-(--color2)/1 z-5"
         ></div>
         {/* right fading */}
         <div
           className="absolute right-0 top-0 w-15 lg:w-30 h-full 
-        bg-linear-to-l from-(--color1) to-(--color2)/5 z-5"
+        bg-linear-to-l from-(--color1) to-(--color2)/1 z-5"
         ></div>
       </Swiper>
     </section>

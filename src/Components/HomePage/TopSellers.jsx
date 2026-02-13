@@ -6,7 +6,7 @@ export default function TopSeller() {
   const secondRow = sellers.slice(8, 17);
 
   return (
-    <section className="text-white my-5 lg:my-10 xl:my-20">
+    <section className="text-white  lg:my-10 xl:my-20">
       <p
         className="text-center text-white font-britanica 
       text-2xl md:text-3xl xl:text-4xl text-nowrap mb-10"
@@ -20,6 +20,7 @@ export default function TopSeller() {
             avatar={seller.avatar}
             name={seller.name}
             eth={seller.eth}
+            customStyle="pr-5"
           />
         ))}
       </Marquee>
@@ -36,6 +37,7 @@ export default function TopSeller() {
             avatar={seller.avatar}
             name={seller.name}
             eth={seller.eth}
+            customStyle="pr-5"
           />
         ))}
       </Marquee>
@@ -43,12 +45,12 @@ export default function TopSeller() {
   );
 }
 
-function SellerCard({ avatar, name, eth }) {
+function SellerCard({ avatar, name, eth, customStyle }) {
   return (
     <div className="p-0.5 mx-2 w-fit rounded-2xl bg-linear-to-r from-(--color2)/80 to-(--color3)/50">
       <div
-        className="flex gap-5 bg-linear-to-r from-[#1e1147] to-[#163054] 
-      w-fit p-2 pr-15 rounded-2xl"
+        className={`flex gap-5 bg-linear-to-r from-[#1e1147] to-[#163054] 
+      w-fit p-2  rounded-2xl ${customStyle ? "pr-5 lg:pr-15" : "pr-15"}`}
       >
         <div>
           <img
