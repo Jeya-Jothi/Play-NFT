@@ -113,7 +113,7 @@ const cards = [
 
 export default function Popular() {
   return (
-    <section className="py-10 ">
+    <section className="py-10 xl:py-15 ">
       <p
         className="text-center text-white font-britanica 
       text-2xl md:text-3xl xl:text-4xl text-nowrap"

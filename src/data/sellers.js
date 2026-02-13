@@ -1,0 +1,98 @@
+export const sellers = [
+  {
+    id: 1,
+    name: "Leighton Kramer",
+    eth: "276.7",
+    avatar: "https://randomuser.me/api/portraits/men/32.jpg",
+  },
+  {
+    id: 2,
+    name: "Haylie Arcand",
+    eth: "325.6",
+    avatar: "https://randomuser.me/api/portraits/women/44.jpg",
+  },
+  {
+    id: 3,
+    name: "Bowen Higgins",
+    eth: "323.7",
+    avatar: "https://randomuser.me/api/portraits/men/46.jpg",
+  },
+  {
+    id: 4,
+    name: "Saige Fuentes",
+    eth: "327.7",
+    avatar: "https://randomuser.me/api/portraits/women/45.jpg",
+  },
+  {
+    id: 5,
+    name: "Sophie Mclain",
+    eth: "230.6",
+    avatar: "https://randomuser.me/api/portraits/women/68.jpg",
+  },
+  {
+    id: 6,
+    name: "Jeremy Burch",
+    eth: "267.9",
+    avatar: "https://randomuser.me/api/portraits/men/65.jpg",
+  },
+  {
+    id: 7,
+    name: "Amelie Griffith",
+    eth: "332.1",
+    avatar: "https://randomuser.me/api/portraits/women/50.jpg",
+  },
+  {
+    id: 8,
+    name: "Isabela Hart",
+    eth: "289.1",
+    avatar: "https://randomuser.me/api/portraits/women/60.jpg",
+  },
+  {
+    id: 9,
+    name: "Diego Bentley",
+    eth: "290.7",
+    avatar: "https://randomuser.me/api/portraits/men/75.jpg",
+  },
+  {
+    id: 10,
+    name: "Daisy Arnold",
+    eth: "265.2",
+    avatar: "https://randomuser.me/api/portraits/women/65.jpg",
+  },
+  {
+    id: 11,
+    name: "Aiden Coleman",
+    eth: "312.8",
+    avatar: "https://randomuser.me/api/portraits/men/21.jpg",
+  },
+  {
+    id: 12,
+    name: "Charlotte Ruiz",
+    eth: "298.2",
+    avatar: "https://randomuser.me/api/portraits/women/22.jpg",
+  },
+  {
+    id: 13,
+    name: "Noah Patterson",
+    eth: "356.2",
+    avatar: "https://randomuser.me/api/portraits/men/23.jpg",
+  },
+  {
+    id: 14,
+    name: "Mila Davidson",
+    eth: "281.5",
+    avatar: "https://randomuser.me/api/portraits/women/24.jpg",
+  },
+  {
+    id: 15,
+    name: "Ethan Morales",
+    eth: "339.9",
+    avatar: "https://randomuser.me/api/portraits/men/25.jpg",
+  },
+  {
+    id: 16,
+    name: "Harper Sullivan",
+    eth: "301.3",
+    avatar: "https://randomuser.me/api/portraits/women/26.jpg",
+  },
+];
