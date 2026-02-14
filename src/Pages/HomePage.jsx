@@ -4,6 +4,7 @@ import Popular from "../Components/HomePage/Popular.jsx";
 import TopSeller from "../Components/HomePage/TopSellers.jsx";
 import Explore from "../Components/HomePage/Explore.jsx";
 import HandAnimate from "../Components/HandAnimate.jsx";
+import JoinCommunity from "../Components/HomePage/JoinCommunity.jsx";
 
 export default function HomePage() {
   return (
@@ -15,6 +16,7 @@ export default function HomePage() {
         <TopSeller />
         <Explore />
         <HandAnimate />
+        <JoinCommunity />
       </section>
     </>
   );
