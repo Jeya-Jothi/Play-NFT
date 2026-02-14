@@ -7,91 +7,13 @@ const HomePage = lazy(() => import("../Pages/HomePage.jsx"));
 function Loader() {
   return (
     <div
-      className="h-screen flex items-center justify-center"
+      className="h-screen flex items-center justify-center gap-3"
       role="status"
       aria-label="Loading"
     >
-      <svg
-        width="80"
-        height="24"
-        viewBox="0 0 80 24"
-        xmlns="http://www.w3.org/2000/svg"
-        aria-hidden="true"
-      >
-        <g fill="currentColor">
-          <circle cx="12" cy="12" r="6">
-            <animate
-              attributeName="cy"
-              values="12;4;12"
-              dur="0.6s"
-              repeatCount="indefinite"
-              begin="0s"
-            />
-            <animate
-              attributeName="r"
-              values="6;4;6"
-              dur="0.6s"
-              repeatCount="indefinite"
-              begin="0s"
-            />
-            <animate
-              attributeName="opacity"
-              values="1;0.6;1"
-              dur="0.6s"
-              repeatCount="indefinite"
-              begin="0s"
-            />
-          </circle>
-
-          <circle cx="40" cy="12" r="6">
-            <animate
-              attributeName="cy"
-              values="12;4;12"
-              dur="0.6s"
-              repeatCount="indefinite"
-              begin="0.12s"
-            />
-            <animate
-              attributeName="r"
-              values="6;4;6"
-              dur="0.6s"
-              repeatCount="indefinite"
-              begin="0.12s"
-            />
-            <animate
-              attributeName="opacity"
-              values="1;0.6;1"
-              dur="0.6s"
-              repeatCount="indefinite"
-              begin="0.12s"
-            />
-          </circle>
-
-          <circle cx="68" cy="12" r="6">
-            <animate
-              attributeName="cy"
-              values="12;4;12"
-              dur="0.6s"
-              repeatCount="indefinite"
-              begin="0.24s"
-            />
-            <animate
-              attributeName="r"
-              values="6;4;6"
-              dur="0.6s"
-              repeatCount="indefinite"
-              begin="0.24s"
-            />
-            <animate
-              attributeName="opacity"
-              values="1;0.6;1"
-              dur="0.6s"
-              repeatCount="indefinite"
-              begin="0.24s"
-            />
-          </circle>
-        </g>
-      </svg>
+      <span className="w-4 h-4 rounded-full bg-(--color3) animate-bounce [animation-delay:-0.2s]" />
+      <span className="w-4 h-4 rounded-full bg-(--color3) animate-bounce [animation-delay:-0.1s]" />
+      <span className="w-4 h-4 rounded-full bg-(--color3) animate-bounce" />
     </div>
   );
 }
