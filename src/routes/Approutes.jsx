@@ -11,9 +11,18 @@ function Loader() {
       role="status"
       aria-label="Loading"
     >
-      <span className="w-4 h-4 rounded-full bg-(--color3) animate-bounce [animation-delay:-0.2s]" />
-      <span className="w-4 h-4 rounded-full bg-(--color3) animate-bounce [animation-delay:-0.1s]" />
-      <span className="w-4 h-4 rounded-full bg-(--color3) animate-bounce" />
+      <span
+        className="w-4 h-4 rounded-full bg-linear-to-r from-(--color1) to-(--color3)
+      animate-bounce [animation-delay:-0.2s]"
+      />
+      <span
+        className="w-4 h-4 rounded-full bg-linear-to-r from-(--color1) to-(--color3) 
+      animate-bounce [animation-delay:-0.1s]"
+      />
+      <span
+        className="w-4 h-4 rounded-full bg-linear-to-r from-(--color1) to-(--color3)
+      animate-bounce"
+      />
     </div>
   );
 }
