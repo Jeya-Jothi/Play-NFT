@@ -43,7 +43,7 @@ export default function HeroSection() {
 
   return (
     <section
-      className="text-white mt-5 mb-15 lg:mb-20 lg:mt-10 grid lg:grid-cols-2 items-center
+      className="text-white mt-20 mb-15 lg:mb-20 md:mt-30 2xl:mt-40 grid lg:grid-cols-2 items-center
      gap-10 lg:gap-20 px-5 md:px-10 lg:px-20"
     >
       {/* Left */}
@@ -151,7 +151,7 @@ export default function HeroSection() {
                 transition: { staggerChildren: 0.08, delayChildren: 0.8 },
               },
             }}
-            className="flex -space-x-5 lg:-space-x-7"
+            className="flex -space-x-5 lg:-space-x-7 pl-4"
           >
             {users.map((user) => (
               <motion.img

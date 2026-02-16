@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import Logo from "../../assets/nft logo.svg";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 import { FiSearch } from "react-icons/fi";
 
@@ -19,8 +19,55 @@ export default function Header() {
   const [active, setActive] = useState("home");
   const [open, setOpen] = useState(false);
 
+  const headerRef = useRef(null);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 30);
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (headerRef.current && !headerRef.current.contains(e.target)) {
+        setOpen(false);
+      }
+    };
+
+    if (open) {
+      document.addEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [open]);
+
+  useEffect(() => {
+    if (open) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [open]);
+
   return (
-    <header className="w-full p-5 md:px-10 lg:px-20 md:py-10">
+    <header
+      ref={headerRef}
+      className={`fixed left-0 top-0 z-999 w-full p-5 md:px-10 lg:px-20 transition-all duration-500 ease-in-out 
+        ${isScrolled ? "bg-(--color1)/50 backdrop-blur-xl shadow-sm md:py-5" : "md:py-10"}`}
+    >
       <div className="grid grid-cols-[auto_1fr_auto] gap-5 lg:gap-15 xl:gap-0 xl:grid-cols-3 items-center justify-between">
         <div>
           <img src={Logo} alt="Logo" loading="lazy" className="w-20 md:w-25" />
@@ -91,7 +138,7 @@ export default function Header() {
 
         {/* Mobile handburger menu */}
         <div
-          className=" cursor-pointer relative lg:hidden"
+          className=" cursor-pointer relative z-100 lg:hidden"
           onClick={() => setOpen(!open)}
         >
           <div className="space-y-2">
@@ -117,7 +164,7 @@ export default function Header() {
           {/* Menu list */}
           <div
             className={`absolute flex flex-col justify-between h-[35vh] px-10 md:pr-15 py-5
-               bg-(--color1)/85 backdrop-blur-xs rounded-4xl border border-white/30 top-15
+               bg-(--color1)/90 backdrop-blur-xs rounded-4xl border border-white/30 top-15
              ${open ? "-translate-x-35 md:-translate-x-25 opacity-100" : "translate-x-20 opacity-0"} transition-all duration-500`}
           >
             <NavItem
