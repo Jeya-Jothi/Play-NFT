@@ -2,7 +2,7 @@
 import abstract1 from "../assets/artwork/abstract/abstract1.webp";
 import abstract2 from "../assets/artwork/abstract/abstract2.webp";
 import abstract3 from "../assets/artwork/abstract/abstract3.webp";
-import abstract4 from "../assets/artwork/abstract/abstract4.webp";
+import abstract4 from "../assets/artwork/abstract/abstract4.jpg";
 
 // 3D
 import threeD1 from "../assets/artwork/3dart/3dart1.webp";

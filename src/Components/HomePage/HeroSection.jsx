@@ -1,6 +1,36 @@
+import { motion } from "framer-motion";
+
 import { HiPlay } from "react-icons/hi";
 
 import HeroSticker from "../../assets/images/sticker1.webp";
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 40 },
+  show: (delay = 0) => ({
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.8, delay },
+  }),
+};
+
+const fadeLeft = {
+  hidden: { opacity: 0, x: 60 },
+  show: (delay = 0) => ({
+    opacity: 1,
+    x: 0,
+    transition: { duration: 0.8, delay },
+  }),
+};
+
+const avatarVariants = {
+  hidden: { opacity: 0, x: -15, scale: 0.8 },
+  show: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: { type: "spring", stiffness: 260, damping: 20 },
+  },
+};
 
 export default function HeroSection() {
   const users = [
@@ -18,7 +48,12 @@ export default function HeroSection() {
     >
       {/* Left */}
       <div className="space-y-6 lg:space-y-12">
-        <div>
+        <motion.div
+          initial="hidden"
+          animate="show"
+          variants={fadeUp}
+          custom={0.2}
+        >
           <p className="font-britanica text-4xl xl:text-5xl">
             Discover, Collect and Sell Dope Art and NFTs
           </p>
@@ -29,85 +64,124 @@ export default function HeroSection() {
             <span className="font-sans!">(</span>NFTs
             <span className="font-sans!">)</span>
           </p>
-        </div>
+        </motion.div>
 
-        <div className="flex items-center gap-3 lg:gap-10">
-          <button
-            className="group relative overflow-hidden
+        <motion.div
+          initial="hidden"
+          animate="show"
+          variants={fadeUp}
+          custom={0.4}
+          className="flex items-center gap-3 lg:gap-10"
+        >
+          <div className="flex items-center gap-3 xl:gap-10">
+            <button
+              className="group relative overflow-hidden
              py-1.5 md:py-2 px-6 md:px-8 rounded-xl
              bg-linear-to-r from-(--color2) to-(--color3)
              text-sm md:text-base hover:shadow-lg shadow-white/20 transition-all duration-300"
-          >
-            Discover
-            {/* shine */}
-            <span
-              className="pointer-events-none absolute top-[-30%] left-[-40%]
+            >
+              Discover
+              {/* shine */}
+              <span
+                className="pointer-events-none absolute top-[-30%] left-[-40%]
                h-[160%] w-[20%] rotate-25
                bg-linear-to-r from-transparent via-white/60 to-transparent
                blur-xs opacity-0 transition-all duration-700
                group-hover:left-[120%] group-hover:opacity-100"
-            />
-          </button>
+              />
+            </button>
 
-          <button
-            className="p-0.5 rounded-xl
+            <button
+              className="p-0.5 rounded-xl
                      bg-linear-to-r from-(--color2) to-(--color3) group"
-          >
-            <div
-              className="py-1.5 px-6 md:px-8 bg-(--color1)/60 flex items-center gap-2 rounded-xl 
-            group-hover:bg-(--color1) transition-all duration-300"
             >
-              <span className="text-sm md:text-base text-white/90">Create</span>
+              <div
+                className="py-1.5 px-6 md:px-8 bg-(--color1)/60 flex items-center gap-2 rounded-xl 
+            group-hover:bg-(--color1) transition-all duration-300"
+              >
+                <span className="text-sm md:text-base text-white/90">
+                  Create
+                </span>
+              </div>
+            </button>
+            <div className="flex items-center gap-1 lg:gap-2 cursor-pointer group">
+              <HiPlay className="text-2xl fill-current text-blue-300 group-hover:scale-115 transition-all duration-300" />
+              <p className="text-xs md:text-sm underline text-white/90 group-hover:text-white">
+                Watch a video
+              </p>
             </div>
-          </button>
-          <div className="flex items-center gap-1 lg:gap-2 cursor-pointer group">
-            <HiPlay className="text-2xl fill-current text-blue-300 group-hover:scale-115 transition-all duration-300" />
-            <p className="text-xs md:text-sm underline text-white/90 group-hover:text-white">
-              Watch a video
-            </p>
           </div>
-        </div>
+        </motion.div>
 
         {/* Metrix */}
-        <div className="md:w-[55%] lg:w-full xl:w-[80%] 2xl:w-[55%]">
-          <div
-            className="py-1.5 px-6 md:px-8 rounded-xl border border-gray-100/50 flex justify-between
+        <motion.div
+          initial="hidden"
+          animate="show"
+          variants={fadeUp}
+          custom={0.6}
+        >
+          <div className="md:w-[55%] lg:w-full xl:w-[80%] 2xl:w-[55%]">
+            <div
+              className="py-1.5 px-6 md:px-8 rounded-xl border border-gray-100/50 flex justify-between
            bg-linear-to-br from-(--color2) to-(--color3) text-sm md:text-base"
-          >
-            <div>
-              <p className="font-britanica text-2xl lg:text-3xl">27k +</p>
-              <p className="text-white/90">Art Works</p>
-            </div>
-            <div>
-              <p className="font-britanica text-2xl lg:text-3xl">20k +</p>
-              <p className="text-white/90">Auctions</p>
-            </div>
-            <div>
-              <p className="font-britanica text-2xl lg:text-3xl">7k +</p>
-              <p className="text-white/90">Artists</p>
+            >
+              <div>
+                <p className="font-britanica text-2xl lg:text-3xl">27k +</p>
+                <p className="text-white/90">Art Works</p>
+              </div>
+              <div>
+                <p className="font-britanica text-2xl lg:text-3xl">20k +</p>
+                <p className="text-white/90">Auctions</p>
+              </div>
+              <div>
+                <p className="font-britanica text-2xl lg:text-3xl">7k +</p>
+                <p className="text-white/90">Artists</p>
+              </div>
             </div>
           </div>
-        </div>
+        </motion.div>
         <div className="flex items-center gap-10">
           {/* Avatars */}
-          <div className="flex -space-x-5 lg:-space-x-7">
+          <motion.div
+            initial="hidden"
+            animate="show"
+            variants={{
+              hidden: {},
+              show: {
+                transition: { staggerChildren: 0.08, delayChildren: 0.8 },
+              },
+            }}
+            className="flex -space-x-5 lg:-space-x-7"
+          >
             {users.map((user) => (
-              <img
+              <motion.img
                 src={user.img}
                 alt="avatar"
                 key={user.id}
+                variants={avatarVariants}
                 className="w-10 h-10 lg:w-15 lg:h-15 rounded-full border-2 border-(--color2)"
               />
             ))}
-          </div>
-          <div>
+          </motion.div>
+          <motion.div
+            initial="hidden"
+            animate="show"
+            variants={fadeLeft}
+            custom={0.7}
+          >
             <p className="font-britanica text-2xl lg:text-3xl">40k +</p>
             <p className="text-sm -mt-1 md:mt-0 text-white/90">Active Users</p>
-          </div>
+          </motion.div>
         </div>
       </div>
       {/* right */}
-      <div className="flex items-center justify-center">
+      <motion.div
+        initial="hidden"
+        animate="show"
+        variants={fadeLeft}
+        custom={0.5}
+        className="flex items-center justify-center"
+      >
         <div
           className="bg-linear-to-br from-(--color2)/40 to-(--color3)/40 border-2 border-gray-100/5
         backdrop-blur-xl rounded-2xl relative"
@@ -155,7 +229,7 @@ export default function HeroSection() {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }

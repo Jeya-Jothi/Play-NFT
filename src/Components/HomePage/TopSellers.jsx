@@ -1,18 +1,24 @@
 import { sellers } from "../../data/sellers";
 import Marquee from "react-fast-marquee";
 
+import { motion } from "framer-motion";
+
 export default function TopSeller() {
   const firstRow = sellers.slice(0, 8);
   const secondRow = sellers.slice(8, 17);
 
   return (
     <section className="text-white lg:my-10 xl:my-20">
-      <p
+      <motion.p
+        initial={{ opacity: 0, y: -40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
         className="text-center text-white font-britanica 
       text-2xl md:text-3xl xl:text-4xl text-nowrap mb-10"
       >
         Top Sellers
-      </p>
+      </motion.p>
       <Marquee speed={20} pauseOnHover={true}>
         {firstRow.map((seller) => (
           <SellerCard

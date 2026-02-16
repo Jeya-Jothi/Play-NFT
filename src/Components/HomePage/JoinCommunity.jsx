@@ -1,7 +1,15 @@
+import { motion } from "framer-motion";
+
 export default function JoinCommunity() {
   return (
     <section className="text-white mx-5 md:mx-20 lg:mx-50 xl:mx-70 2xl:mx-85 my-10">
-      <div className="p-0.5 rounded-[120px_15px_120px_15px] bg-linear-to-r from-white/50 to-white/0">
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 1 }}
+        transition={{ duration: 1 }}
+        viewport={{ once: true }}
+        className="p-0.5 rounded-[120px_15px_120px_15px] bg-linear-to-r from-white/50 to-white/0"
+      >
         <div
           className="rounded-[120px_15px_120px_15px]
     py-10 px-10
@@ -25,7 +33,7 @@ export default function JoinCommunity() {
             />
           </button>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }

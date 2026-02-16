@@ -12,13 +12,28 @@ export default function PageShell() {
           <Outlet />
         </main>
         <Footer />
+
+        {/* Top left blur ball */}
         <div
           className="h-120 w-120 rounded-full bg-blue-400 absolute top-20 -left-70 
         blur-3xl opacity-40 -z-1"
         ></div>
 
+        {/* Top right blur ball */}
         <div
           className="h-120 w-120 rounded-full bg-blue-400 absolute top-120 -right-70 
+        blur-3xl opacity-40 -z-1"
+        ></div>
+
+        {/* Bottom left blur ball */}
+        <div
+          className="h-120 w-120 rounded-full bg-blue-400 absolute bottom-20 -left-70 
+        blur-3xl opacity-40 -z-1"
+        ></div>
+
+        {/* Bottom right blur ball */}
+        <div
+          className="h-120 w-120 rounded-full bg-blue-400 absolute bottom-120 -right-70 
         blur-3xl opacity-40 -z-1"
         ></div>
       </div>

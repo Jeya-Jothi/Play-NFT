@@ -2,6 +2,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
 
+import { motion } from "framer-motion";
+
 import { FaHeart } from "react-icons/fa";
 
 import Card1 from "../../assets/images/sticker2.webp";
@@ -114,12 +116,16 @@ const cards = [
 export default function Popular() {
   return (
     <section className="py-10 xl:py-15 ">
-      <p
+      <motion.p
+        initial={{ opacity: 0, y: -40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
         className="text-center text-white font-britanica 
       text-2xl md:text-3xl xl:text-4xl text-nowrap"
       >
         Popular this week
-      </p>
+      </motion.p>
       <Swiper
         modules={[Autoplay]}
         spaceBetween={20}
