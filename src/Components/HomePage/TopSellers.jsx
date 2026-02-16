@@ -20,7 +20,7 @@ export default function TopSeller() {
         Top Sellers
       </motion.p>
       <Marquee speed={20} pauseOnHover={true}>
-        {firstRow.map((seller) => (
+        {[...firstRow, ...firstRow].map((seller) => (
           <SellerCard
             key={seller.id}
             avatar={seller.avatar}
@@ -37,7 +37,7 @@ export default function TopSeller() {
         direction="right"
         className="mt-5"
       >
-        {secondRow.map((seller) => (
+        {[...secondRow, ...secondRow].map((seller) => (
           <SellerCard
             key={seller.id}
             avatar={seller.avatar}
